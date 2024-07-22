@@ -5,8 +5,8 @@ from decouple import config as env
 
 
 redis_client = redis.Redis(
-    host=env("REDIS_HOST", default="localhost"),
-    port=env("REDIS_PORT", default=6379),
+    host=env("REDIS_HOST", default="redis"),
+    port=env("REDIS_PORT", default=6379, cast=int),
     db=env("REDIS_DB", default=0),
 )
 

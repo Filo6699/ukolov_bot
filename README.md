@@ -16,3 +16,22 @@
 - [x] /exchange
 - [x] /rates
 - [ ] Завёрнут в докер
+
+## Установка и запуск
+
+### 1. Клонируйте репозиторий
+
+```sh
+git clone https://github.com/Filo6699/ukolov_bot
+cd ukolov_bot
+```
+
+### 2. Настройте `.env` по шаблону `.env.example`
+
+### 3. Запустите `docker-compose up`
+
+```sh
+docker-compose up
+```
+
+### 4. Устроить меня на работу (пожалуйста)

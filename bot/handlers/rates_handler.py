@@ -18,7 +18,7 @@ router = Router()
 def float_to_str(value: float) -> str:
     """
     Better float to str, than str().
-
+    
     Rounds up the float and removes zero's at the end, if present.
     """
 
@@ -35,10 +35,11 @@ async def rates_handler(message: Message) -> None:
     rates = get_all_rates()
     output = "*Rates*\n\n"
     for charcode, unitval in rates.items():
+        charcode = charcode[6:] # удаление "rates:"
         if charcode == "RUB":
             continue
         value = float_to_str(unitval)
-        output += f"{charcode[6:]} = `{value}` RUB\n"
+        output += f"{charcode} = `{value}` RUB\n"
 
     await message.answer(output)
 
